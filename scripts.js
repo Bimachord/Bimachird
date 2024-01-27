@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
       { name: "Pasapu Monca", page: "assets/list_lagu/pasapu-monca.html"},
       { name: "Nahu Ma Mbali", page: "assets/list_lagu/nahu-mambali.html"},
       { name: "Malingi", page: "assets/list_lagu/malingi.html"},
-      { name: "Ngahi Rawi Pahu", page: "assets/list_lagu/ngahi-rawi-pahu.html"},
+      { name: "Nggahi Rawi Pahu", page: "assets/list_lagu/ngahi-rawi-pahu.html"},
     ];
   
 
