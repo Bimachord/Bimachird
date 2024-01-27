@@ -3,12 +3,12 @@ document.addEventListener('DOMContentLoaded', function () {
     myList.style.display = 'none';
     // daftar lagu
     var names = [
-      { name: "Nangi Dana Tambora", page: "nangi-dana-tambora.html" },
-      { name: "Sapa Moti Malingi", page: "sapa-moti-malingi.html" },
-      { name: "Pasole", page: "pasole.html" },
-      { name: "Pasapu Monca", page: "pasapu-monca.html"},
-      { name: "Nahu Ma Mbali", page: "nahu-mambali.html"},
-      { name: "Malingi", page: "malingi.html"},
+      { name: "Nangi Dana Tambora", page: "assets/list_lagu/nangi-dana-tambora.html" },
+      { name: "Sapa Moti Malingi", page: "assets/list_lagu/sapa-moti-malingi.html" },
+      { name: "Pasole", page: "assets/list_lagu/pasole.html" },
+      { name: "Pasapu Monca", page: "assets/list_lagu/pasapu-monca.html"},
+      { name: "Nahu Ma Mbali", page: "assets/list_lagu/nahu-mambali.html"},
+      { name: "Malingi", page: "assets/list_lagu/malingi.html"},
     ];
   
 
