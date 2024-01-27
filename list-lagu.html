@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <title>Keren Navbar</title>
+  <style>
+    body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+      background-color: #1a1a1a; 
+      color: #ffffff; 
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+    <a class="navbar-brand" href="#">
+      <img src="assets/logo.png" alt="Logo" height="30">
+      Bimachord.com
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Tentang Saya</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">List Lagu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="kontak.html">Request Lagu Hubungi Saya</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <div class="container mt-3" style="margin-bottom: 12px;">
+    <input type="text" id="myInput" class="form-control" onkeyup="searchFunction()" placeholder="Cari Lagu.">
+    <ul id="myList" class="list-group mt-3">
+    </ul>
+  </div>
+
+  <div class="bg-dark text-light text-center py-2 protected-text">
+    <p style="font-style: italic; color: #00ff00; font-size: 40px; margin-bottom: 2px;">Bimachord.com</p>
+  </div>
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-6 offset-md-3" style="color: #00ff00;">
+        <h3 class="text-center" style="margin-bottom: 10px;">Daftar Lagu</h3>
+        <tbody>
+          <p class="content-divider">
+            <a href="assets/list_lagu/nangi-dana-tambora.html">Nangi Dana Tambora</a></p>
+          <p class="content-divider">
+            <a href="assets/list_lagu/sapa-moti-malingi.html">Sapa Moti Malingi</a></p>
+          <p class="content-divider">
+            <a href="assets/list_lagu/pasole.html">Pasole</a></p>
+          <p class="content-divider">
+             <a href="assets/list_lagu/nahu-mambali.html">Nahu Ma Mbali</a></p>
+          <p class="content-divider">
+             <a href="assets/list_lagu/pasapu-monca.html">Pasapu Monca</a></p>
+          <p class="content-divider">
+             <a href="assets/list_lagu/malingi.html">Malingi</a></p>
+          <p class="content-divider">
+             <a href="assets/list_lagu/ngahi-rawi-pahu.html">Nggahi Rawi Pahu</a></p>
+          <p class="content-divider">
+             <a href="#">Sinci Weki Dei Rade</a></p>
+        </tbody>
+      </div>
+    </div>
+  </div>
+ 
+
+  <footer class="bg-dark text-light text-center py-2 protected-text">
+    <p style="font-style: italic; color: #00ff00; font-size: 14px; margin-bottom: 2px;">Copyright &copy; 2024 By, Anhar Aldevaro..</p>
+    <p style="font-style: italic; color: #00ff00; font-size: 14px;">&copy;Bimachord.com</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+
+
+</body>
+</html>
