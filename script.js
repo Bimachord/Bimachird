@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var names = [
       { name: "Nangi Dana Tambora", page: "nangi-dana-tambora.html" },
       { name: "Sapa Moti Malingi", page: "sapa-moti-malingi.html" },
-      { name: "Pasole", page: "assets/list_lagu/pasole.html" },
+      { name: "Pasole", page: "pasole.html" },
       { name: "Pasapu Monca", page: "pasapu-monca.html"},
       { name: "Nahu Ma Mbali", page: "nahu-mambali.html"},
       { name: "Malingi", page: "malingi.html"},
