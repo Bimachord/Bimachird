@@ -1,12 +1,33 @@
-function showImage(imageSrc) {
-    var modal = document.getElementById('imageModal');
-    var modalImage = document.getElementById('modalImage');
-  
-    modal.style.display = 'block';
-    modalImage.src = imageSrc;
+document.addEventListener('DOMContentLoaded', function () {
+  const galleries = document.querySelectorAll('.gallery');
+
+  galleries.forEach(function (gallery) {
+    gallery.addEventListener('click', function (event) {
+      if (event.target.tagName === 'IMG') {
+        const largeImagePath = event.target.getAttribute('data-large');
+        showLargeImage(largeImagePath);
+      }
+    });
+  });
+
+  const largeImageContainer = document.createElement('div');
+  largeImageContainer.classList.add('large-image-container');
+  document.body.appendChild(largeImageContainer);
+
+  largeImageContainer.addEventListener('click', function () {
+    hideLargeImage();
+  });
+
+  function showLargeImage(path) {
+    const largeImage = document.createElement('img');
+    largeImage.classList.add('large-image');
+    largeImage.src = path;
+    largeImageContainer.innerHTML = '';
+    largeImageContainer.appendChild(largeImage);
+    largeImageContainer.style.display = 'flex';
   }
-  
-  function closeModal() {
-    var modal = document.getElementById('imageModal');
-    modal.style.display = 'none';
+
+  function hideLargeImage() {
+    largeImageContainer.style.display = 'none';
   }
+});
