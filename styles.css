@@ -34,3 +34,44 @@
   color: blue;
   cursor: pointer;
 }
+
+.gallery {
+  display: flex;
+}
+
+.thumbnail {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: 200px;
+  display: block;
+  max-width: 150px;
+  max-height: 200px;
+}
+
+.close {
+  color: white;
+  
+  top: 2px;
+  right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
