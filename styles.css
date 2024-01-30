@@ -71,3 +71,31 @@
   max-height: 80%;
   border: 2px solid white;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+#scroll-icon {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#scroll-icon:hover {
+    background-color: #2980b9;
+}
+
