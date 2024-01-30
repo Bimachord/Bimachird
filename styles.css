@@ -81,7 +81,8 @@ body {
 #scroll-icon {
     position: fixed;
     right: 20px;
-    bottom: 20px;
+    top: 50%;
+    transform: translateY(-50%);
     background-color: #3498db;
     color: #fff;
     font-size: 24px;
@@ -98,4 +99,3 @@ body {
 #scroll-icon:hover {
     background-color: #2980b9;
 }
-
