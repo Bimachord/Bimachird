@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <title>Buku Tamu Bimachord</title>
+  <style>
+    body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+      background-color: #1a1a1a; 
+      color: #ffffff; 
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+    <a class="navbar-brand" href="#">
+      <img src="assets/logo.png" alt="Logo" height="30">
+      Bimachord.com
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Tentang Saya</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="list-lagu.html">List Lagu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Request Lagu Hubungi Saya</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <div class="container mt-3" style="margin-bottom: 12px;">
+    <input type="text" id="myInput" class="form-control" onkeyup="searchFunction()" placeholder="Cari Lagu.">
+    <ul id="myList" class="list-group mt-3">
+    </ul>
+  </div>
+
+  <div class="bg-dark text-light text-center py-2 protected-text">
+    <p style="font-style: italic; color: #00ff00; font-size: 40px; margin-bottom: 2px;">Bimachord.com</p>
+  </div>
+  <div class="container mt-2">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 content-divider">
+      </div>
+    </div>
+  </div>
+  
+  <div class="protected-text">
+    <div class="content-divider text-center">
+      <p style="color: #00ff00; font-size: 30px">Buku Tamu Bimachord</p>
+    </div>
+  </div>
+
+  <div class="protected-text">
+    <div class="row">
+      <ul style="color: #ff000d;">Catatan :</ul>
+      <p>&nbsp;Sebelum kamu menggunakan buku tamu Bimachord,</p>
+    </div>
+  </div>
+  <div class="protected-text">
+    <ul>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;silahkan mendaftar terlebih dahulu caranya yaitu :</ul>
+  </div>
+
+  <div class="protected-text container mt-2">
+    <div>
+     <ul class="row">
+        <li style="color: #00ff48;">Tulis Nama</li>
+        <p>&nbsp;kamu di</p>
+        <p style="color: #00ff48;">&nbsp;kolom Nama</p> 
+     </ul>
+     <ul class="row">
+        <li >Tulis judul</li>
+        <p style="color: #00ff48;">&nbsp;lagu</p>
+        <p>&nbsp;di kolom</p>
+        <p style="color: #00ff48;">&nbsp;Request</p> 
+     </ul>
+     <ul class="row">
+        <li >lalu setelah itu klik tombol </li>
+        <p style="color: #00ff48;">&nbsp;Kirim</p> 
+     </ul>
+    </div>
+  </div>
+
+  <div class="protected-text" style="font-family: courier;">
+    <div class="content-divider text-center">
+      <p style="color: #d0ff00; font-size: 30px">PENTING!!! HARAP DIBACA!!!</p>
+      <p style="color: #d0ff00; font-size: 30px">SEBELUM REQUEST!!!</p>
+    </div>
+  </div>
+
+  <div class="protected-text">
+    <div class="text-center">
+      <p>1. Pastikan dulu di blog ini memang belum ada chord/kunci gitar yang kamu cari dengan menelusurinya di list lagu atau kolom pencarian di atas</p>
+      <p>2. Jika sudah di pastikan chord yang kamu cari tidak ada di blog ini, coba lihat dulu di google search engine ,barangkali di blog/website lain sudah ada</p>
+      <p>3. Request chord/ kunci gitar yang sudah bertebaran di blog/website lain di menu search engine google , akan di filterterlebih dahulu jadi mungkin requestnya akan sangat lama atau bahkan tidak akan di posting sama sekali.</p>
+    </div>
+  </div>
+
+  <div class="protected-text">
+    <div style="background-color: #322727;">
+      <div class="row">
+        <ul>jadikan panduan kunci gitarmu jangan hanya di blog ini saja karna kami menyadari blog ini sangat jauh dari kesempurnaan dan notabenya kebanyakan berisi kunci-kunci gitar dasar. Baca : Tentang kami</ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="protected-text container mt-2">
+    <div>
+     <ul class="row">
+        <p>Terima kasih atas pengertianya.</li>
+        <p>&nbsp;dan jangan membuat</p>
+        <p style="color: #00ff48;">&nbsp;SPAM..</p> 
+     </ul>
+    </div>
+  </div>
+
+  <div class="protected-text container mt-2 text-center">
+    <div>
+        <p>Kami dari segenap team bimachord.com sangat berterima kasih karena kamu sudah bersedia mengunjungi blog ini. salam....</li>
+    </div>
+  </div>
+  
+
+  <form id="commentForm">
+    <label for="name">Nama Anda:</label> <!-- Mengubah label dari "Nama" menjadi "Playcolder" -->
+    <input type="text" id="name" name="name" placeholder="Masukan Nama Anda" required>
+
+    <label for="comment">Request:</label>
+    <textarea id="comment" name="comment" rows="4" placeholder="Request" required></textarea>
+
+    <button type="button" onclick="submitComment()">Kirim</button>
+</form>
+
+<div id="commentSection"></div>
+
+ 
+
+  <footer class="bg-dark text-light text-center py-2 protected-text">
+    <p style="font-style: italic; color: #00ff00; font-size: 14px; margin-bottom: 2px;">Copyright &copy; 2024 By, Anhar Aldevaro..</p>
+    <p style="font-style: italic; color: #00ff00; font-size: 14px;">&copy;Bimachord.com</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="scripts.js"></script>
+
+  <script src="komen.js"></script>
+
+</body>
+</html>
