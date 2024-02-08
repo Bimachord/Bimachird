@@ -99,3 +99,60 @@ body {
 #scroll-icon:hover {
     background-color: #2980b9;
 }
+
+/* style komentar */
+
+#commentForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#commentForm label {
+  margin-bottom: 5px;
+  color: white; /* Warna teks label menjadi putih */
+}
+
+#commentForm input,
+#commentForm textarea {
+  width: 400px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+#commentSection {
+  margin-top: 20px;
+  max-height: 300px; /* Menetapkan ketinggian maksimum untuk bagian komentar */
+  overflow-y: auto; /* Membuat bagian komentar dapat discroll ketika lebih banyak */
+}
+
+/* Gaya untuk nama (biru) */
+#commentSection strong {
+  color: blue;
+}
+
+/* Gaya untuk komentar (abu-abu) */
+#commentSection div {
+  color: #808080; /* Warna abu-abu */
+  background-color: black; /* Memberikan latar belakang hitam agar teks abu-abu terlihat jelas */
+  padding: 10px;
+  margin-bottom: 5px;
+  width: 500px;
+  font-size: smaller;
+  border-radius: 5px;
+  max-width: 80%;
+  align-items: center;
+}
+
+.comment-box {
+  background-color: rgba(255, 255, 255, 0.1); /* Warna latar belakang dengan kejelasan 0.1 */
+  padding: 10px; /* Padding agar konten terlihat lebih rapi */
+  margin: 0 auto 10px; /* Margin otomatis secara vertikal dan horisontal untuk posisi tengah */
+  border-radius: 5px; /* Sudut border untuk tampilan yang lebih rapi */
+  max-width: 80%; /* Membatasi lebar maksimum kolom hasil komentar */
+}
+
+.comment-box strong {
+  font-size: smaller;
+}
