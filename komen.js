@@ -1,6 +1,6 @@
 var savedComments = JSON.parse(localStorage.getItem("savedComments")) || [];
-
 var commentSection = document.getElementById("commentSection");
+
 savedComments.forEach(function(savedComment) {
     if (savedComment.type === "user") {
         addComment(savedComment.name, savedComment.comment);
@@ -18,19 +18,17 @@ function submitComment() {
         addComment(name, comment);
 
         // Simpan komentar pengguna ke local storage
-        savedComments.push({ type: "user", name: name, comment: comment });
-        localStorage.setItem("savedComments", JSON.stringify(savedComments));
+        savedComments.unshift({ type: "user", name: name, comment: comment });
 
         // Tambahkan balasan otomatis dari admin
         var adminReply = "Komentar segera kami tanggapi, mohon menunggu";
         addAdminReply(adminReply);
 
         // Simpan balasan admin ke local storage
-        savedComments.push({ type: "admin", reply: adminReply });
-        localStorage.setItem("savedComments", JSON.stringify(savedComments));
+        savedComments.unshift({ type: "admin", reply: adminReply });
 
-        // Kirim komentar ke server (opsional)
-        // sendCommentToServer(name, comment);
+        // Simpan data ke local storage
+        localStorage.setItem("savedComments", JSON.stringify(savedComments));
 
         // Kosongkan input fields
         document.getElementById("name").value = "";
@@ -45,7 +43,9 @@ function addComment(name, comment) {
     var newComment = document.createElement("div");
     newComment.classList.add("comment-box"); // Menambahkan kelas untuk styling
     newComment.innerHTML = "<strong>" + name + ":</strong> " + comment;
-    commentSection.appendChild(newComment);
+
+    // Menyisipkan komentar di paling atas
+    commentSection.insertBefore(newComment, commentSection.firstChild);
 }
 
 // Fungsi untuk menambahkan balasan otomatis dari admin
@@ -53,5 +53,7 @@ function addAdminReply(adminReply) {
     var adminReplyElement = document.createElement("div");
     adminReplyElement.classList.add("comment-box"); // Menambahkan kelas untuk styling
     adminReplyElement.innerHTML = "<strong style='color:red;'>Admin:</strong> " + adminReply;
-    commentSection.appendChild(adminReplyElement);
+
+    // Menyisipkan balasan di paling atas
+    commentSection.insertBefore(adminReplyElement, commentSection.firstChild);
 }
