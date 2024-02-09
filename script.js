@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
       { name: "Malingi", page: "malingi.html"},
       { name: "Nggahi rawi pahu", page: "ngahi-rawi-pahu.html"},
       { name: "Tambulate", page: "tambulate.html"},
+      { name: "Janji Da Ule", page: "janji-da-ule.html"},
        
     ];
   
