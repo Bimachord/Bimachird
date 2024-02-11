@@ -34,7 +34,7 @@ function submitComment() {
         document.getElementById("name").value = "";
         document.getElementById("comment").value = "";
     } else {
-        alert("Playcolder dan komentar harus diisi.");
+        notif("nama dan request harus diisi.");
     }
 }
 
@@ -57,3 +57,18 @@ function addAdminReply(adminReply) {
     // Menyisipkan balasan di paling atas
     commentSection.insertBefore(adminReplyElement, commentSection.firstChild);
 }
+
+function notif(message) {
+    // Membuat elemen untuk notifikasi
+    const notification = document.createElement('div');
+    notification.classList.add('notification');
+    notification.textContent = message;
+  
+    // Menambahkan notifikasi ke dalam body
+    document.body.appendChild(notification);
+  
+    // Menghilangkan notifikasi setelah 2 detik
+    setTimeout(function() {
+      notification.remove();
+    }, 2000);
+  }
