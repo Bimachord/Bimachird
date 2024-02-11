@@ -183,8 +183,6 @@
   
 
   #submitBtn {
-    margin-left: 200px;
-    margin-right: 200px;
     right: 20px;
     padding: 10px 20px;
     background-color: #007bff;
@@ -195,8 +193,6 @@
   }
 
   #registerBtn {
-    margin-left: 200px;
-    margin-right: 200px;
     padding: 8px 20px;
     background-color: #007bff;
     color: #fff;
@@ -285,8 +281,6 @@
   }
 
   #logoutBtn {
-    margin-left: 200px;
-    margin-right: 200px;
     padding: 8px 20px;
     background-color: #1daa43;
     color: #fff;
