@@ -184,17 +184,21 @@
 
   #submitBtn {
     background-color: #007bff;
-    color: #fff;
     padding: 8px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     
   }
 
   #registerBtn {
-    margin-left: 200px;
-    margin-right: 200px;
-    padding: 8px 20px;
     background-color: #007bff;
+    padding: 8px 20px;
     color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     
   }
   #loginFormContainer {
