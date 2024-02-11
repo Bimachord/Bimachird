@@ -77,9 +77,12 @@
   </div>
 
   <div class="protected-text" style="text-align: center;">
-    <p>1. <span style="color: #00ff00;">Tulis Nama</span> kamu di <span style="color: #00ff00;">kolom Nama</span></p>
-    <p>2. Tulis judul<span style="color: #00ff00;"> lagu</span> di kolom <span style="color: #00ff00;">Request</span></p>
-    <p>3. lalu setelah itu klik tombol <span style="color: #00ff00;">Kirim</span></p>
+    <p>1. <span style="color: #00ff00;">Login</span> atau jika belum punya akun <span style="color: #00ff00;">klik daftar</span></p>
+    <p>2. setelah itu <span style="color: #00ff00;">Tulis Nama</span> kamu di <span style="color: #00ff00;">kolom Nama</span></p>
+    <p>3. Tulis judul<span style="color: #00ff00;"> lagu</span> di kolom <span style="color: #00ff00;">Request</span></p>
+    <p>4. lalu setelah itu klik tombol <span style="color: #00ff00;">Kirim</span></p>
+    <p>5. <span style="color: #00ff00;">Harap di ingat username</span> dan <span style="color: #00ff00;">Password</span> yang kamu buat</p>
+
   </div>
 
 
@@ -88,21 +91,51 @@
     <p><span style="color: yellow; font-weight: bold;">SEBELUM REQUEST!!!</span></p>
   </div>
   
-  <div class="paragraf">
+  <div class="paragraf protected-text">
     <p style="max-width: 600px; margin: 0 auto;">1. Pastikan dulu di blog ini memang belum ada chord/kunci gitar yang kamu cari dengan menelusurinya di list lagu atau kolom pencarian di atas</p>
     <p style="max-width: 600px; margin: 0 auto;">2. Jika sudah di pastikan chord yang kamu cari tidak ada di blog ini, coba lihat dulu di google search engine, barangkali di blog/website lain sudah ada</p>
     <p style="max-width: 600px; margin: 0 auto;">3. Request chord/kunci gitar yang sudah bertebaran di blog/website lain di menu search engine google, akan di filter terlebih dahulu jadi mungkin requestnya akan sangat lama atau bahkan tidak akan di posting sama sekali.</p>
   </div>
   
-  <div class="paragraf" style="text-align: center; background-color: white; padding: 20px; border: 1px solid black; border-radius: 10px;">
+  <div class="paragraf protected-text" style="text-align: center; background-color: white; padding: 20px; border: 1px solid black; border-radius: 10px;">
     <p style="max-width: 600px; margin: 0 auto; color: black;">Jadikan panduan kunci gitarmu jangan hanya di blog ini saja karena kami menyadari blog ini sangat jauh dari kesempurnaan dan notabene kebanyakan berisi kunci-kunci gitar dasar. <a href="tentang-kami.html" style="color: blue;">Baca: Tentang Kami</a></p>
   </div>
 
-  <div class="paragraf" style="text-align: center;">
+  <div class="paragraf protected-text" style="text-align: center;">
     <p>Terima kasih atas pengertianya. dan jangan membuat <span style="color: purple; font-weight: bold;">SPAM..</span> Kami dari segenap team bimachord.com sangat berterima kasih karena kamu sudah bersedia mengunjungi blog ini. salam....</p>
   </div>
-  
 
+  <button id="submitBtn">Masuk</button>
+  <i class="text-center">atau</i>
+  <button id="registerBtn">Daftar</button>
+  <button id="logoutBtn">Log Out</button>
+
+
+  <div class="formContainer" id="loginFormContainer">
+    <form id="loginForm">
+        <span class="closeButton" onclick="hideLoginForm()">x</span>
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <div class="formContainer" id="registerFormContainer">
+    <form id="registerForm">
+        <span class="closeButton" onclick="tutup()">x</span>
+      <input type="text" id="regUsername" placeholder="Username" required>
+      <input type="password" id="regPassword" placeholder="Password" required>
+      <select id="gender" name="gender" required>
+        <option value="">Select</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+      <button type="submit">Daftar</button>
+    </form>
+  </div>
+  
+<div id="commentFormContainer">
   <form id="commentForm">
     <label for="name">Nama Anda:</label> <!-- Mengubah label dari "Nama" menjadi "Playcolder" -->
     <input type="text" id="name" name="name" placeholder="Masukan Nama Anda" required>
@@ -112,7 +145,7 @@
 
     <button type="button" onclick="submitComment()">Kirim</button>
   </form>
-
+</div>
   <div id="commentSection"></div>
 
  
@@ -126,6 +159,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="scripts.js"></script>
+  <script src="fungsiLogin.js"></script>
 
   <script src="komen.js"></script>
 
