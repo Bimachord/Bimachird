@@ -1,158 +1,309 @@
 .navbar-nav {
-  animation: fadeInUp 1s ease;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+    animation: fadeInUp 1s ease;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
-}
-
-.underlined-text {
-      border-bottom: 1px dotted #ffffff;
-      margin-bottom: 20px;
-    }
-.content-divider {
-      border-bottom: 1px dotted #ffffff; /* Garis titik-titik di bawah elemen h2 */
-      margin-bottom: 20px; /* Ruang antara elemen h2 dan kontennya */
-    }
-/* styles.css */
-.protected-text {
-  user-select: none; /* Mencegah pemilihan teks */
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  pointer-events: none; /* Mencegah tindakan pointer, seperti klik dan seleksi */
-}
-
-#myList li {
-  color: blue;
-  cursor: pointer;
-}
-
-.gallery {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-.gallery img {
-  cursor: pointer;
-  transition: transform 0.3s;
-  height: 100px;
-  justify-content: center;
-  margin-right: 30px;
-}
-
-.gallery img:hover {
-  transform: scale(1.1);
-}
-
-.large-image-container {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.9);
-}
-
-.large-image {
-  max-width: 80%;
-  max-height: 80%;
-  border: 2px solid white;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-}
-
-#scroll-icon {
-    position: fixed;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #3498db;
-    color: #fff;
-    font-size: 24px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  
+  .underlined-text {
+        border-bottom: 1px dotted #ffffff;
+        margin-bottom: 20px;
+      }
+  .content-divider {
+        border-bottom: 1px dotted #ffffff; /* Garis titik-titik di bawah elemen h2 */
+        margin-bottom: 20px; /* Ruang antara elemen h2 dan kontennya */
+      }
+  /* styles.css */
+  .protected-text {
+    user-select: none; /* Mencegah pemilihan teks */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    pointer-events: none; /* Mencegah tindakan pointer, seperti klik dan seleksi */
+  }
+  
+  #myList li {
+    color: blue;
     cursor: pointer;
-    transition: background-color 0.3s;
-}
+  }
+  
+  .gallery {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .gallery img {
+    cursor: pointer;
+    transition: transform 0.3s;
+    height: 100px;
+    justify-content: center;
+    margin-right: 30px;
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.1);
+  }
+  
+  .large-image-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+  }
+  
+  .large-image {
+    max-width: 80%;
+    max-height: 80%;
+    border: 2px solid white;
+  }
+  
+  body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+  }
+  
+  #scroll-icon {
+      position: fixed;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #3498db;
+      color: #fff;
+      font-size: 24px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  }
+  
+  #scroll-icon:hover {
+      background-color: #2980b9;
+  }
+  
+  /* style komentar */
+  
+  #commentFormContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Mengatur tinggi menjadi otomatis */
+    margin-top: 20px; /* Mengatur jarak dari bagian atas halaman */
+  }
+  
+  
+  #commentForm {
+    width: 300px; /* Atur lebar formulir sesuai kebutuhan */
+    padding: 20px;
+    background-color: #d2a3a3;
+    border-radius: 5px;
+  }
+  
 
-#scroll-icon:hover {
-    background-color: #2980b9;
-}
+  #commentForm label {
+    margin-bottom: 2px;
+    
+  }
+  
+  #commentForm input,
+  #commentForm textarea {
+    width: calc(100% - 20px);
+    margin-bottom: 5px;
+    padding: 5px;
+  }
+  
+  #commentForm button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #commentForm button:hover {
+    background-color: #45a049;
+  }
+  
+  #commentSection {
+    margin-top: 20px;
+    max-height: 300px; /* Menetapkan ketinggian maksimum untuk bagian komentar */
+    overflow-y: auto; /* Membuat bagian komentar dapat discroll ketika lebih banyak */
+  }
+  
+  /* Gaya untuk nama (biru) */
+  #commentSection strong {
+    color: blue;
+  }
+  
+  /* Gaya untuk komentar (abu-abu) */
+  #commentSection div {
+    color: #808080; /* Warna abu-abu */
+    background-color: black; /* Memberikan latar belakang hitam agar teks abu-abu terlihat jelas */
+    padding: 10px;
+    margin-bottom: 5px;
+    width: 500px;
+    font-size: smaller;
+    border-radius: 5px;
+    max-width: 80%;
+    align-items: center;
+  }
+  
+  .comment-box {
+    background-color: rgba(255, 255, 255, 0.1); /* Warna latar belakang dengan kejelasan 0.1 */
+    padding: 10px; /* Padding agar konten terlihat lebih rapi */
+    margin: 0 auto 10px; /* Margin otomatis secara vertikal dan horisontal untuk posisi tengah */
+    border-radius: 5px; /* Sudut border untuk tampilan yang lebih rapi */
+    max-width: 80%; /* Membatasi lebar maksimum kolom hasil komentar */
+  }
+  
+  .comment-box strong {
+    font-size: smaller;
+  }
+  
 
-/* style komentar */
+  #submitBtn {
+    margin-left: 200px;
+    margin-right: 200px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 
-#commentForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-}
+  #registerBtn {
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 8px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 
-#commentForm label {
-  margin-bottom: 5px;
-  color: white; /* Warna teks label menjadi putih */
-}
+  #loginFormContainer {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  #loginFormContainer form {
+    display: flex;
+    flex-direction: column;
+  }
 
-#commentForm input,
-#commentForm textarea {
-  width: 300px;
-  padding: 5px;
-  margin-bottom: 10px;
-}
+  #loginFormContainer input,
+  #loginFormContainer button {
+    width: 300px;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
 
-#commentSection {
-  margin-top: 20px;
-  max-height: 300px; /* Menetapkan ketinggian maksimum untuk bagian komentar */
-  overflow-y: auto; /* Membuat bagian komentar dapat discroll ketika lebih banyak */
-}
+  .formContainer {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .formContainer form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .formContainer input,
+  .formContainer button {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+  }
+  .formContainer button{
+    background-color: #4caf50;
+  }
 
-/* Gaya untuk nama (biru) */
-#commentSection strong {
-  color: blue;
-}
+  .formContainer label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
 
-/* Gaya untuk komentar (abu-abu) */
-#commentSection div {
-  color: #808080; /* Warna abu-abu */
-  background-color: black; /* Memberikan latar belakang hitam agar teks abu-abu terlihat jelas */
-  padding: 10px;
-  margin-bottom: 5px;
-  width: 500px;
-  font-size: smaller;
-  border-radius: 5px;
-  max-width: 80%;
-  align-items: center;
-}
+  .formContainer select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
 
-.comment-box {
-  background-color: rgba(255, 255, 255, 0.1); /* Warna latar belakang dengan kejelasan 0.1 */
-  padding: 10px; /* Padding agar konten terlihat lebih rapi */
-  margin: 0 auto 10px; /* Margin otomatis secara vertikal dan horisontal untuk posisi tengah */
-  border-radius: 5px; /* Sudut border untuk tampilan yang lebih rapi */
-  max-width: 80%; /* Membatasi lebar maksimum kolom hasil komentar */
-}
+  .notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.825);
+    color: #13d751;
+    border-radius: 5px;
+  }
 
-.comment-box strong {
-  font-size: smaller;
-}
+  #logoutBtn {
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 8px 20px;
+    background-color: #1daa43;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+  }
+
+  .closeButton {
+    position: absolute;
+    top: -15px; /* Atur posisi lebih tinggi */
+    right: 5px;
+    color: red; /* Ubah warna menjadi merah */
+    cursor: pointer;
+    font-size: 30px; /* Atur ukuran font */
+    font-weight: bold; /* Atur ketebalan font */
+  }
+  
+  
