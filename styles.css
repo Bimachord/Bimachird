@@ -299,5 +299,22 @@
     font-size: 30px; /* Atur ukuran font */
     font-weight: bold; /* Atur ketebalan font */
   }
-  
+
+
+/* style untuk iklan */
+.ad-container {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .ad-container iframe {
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Media query untuk perangkat Android dengan lebar layar kurang dari 728px */
+  @media only screen and (max-width: 728px) {
+    .ad-container iframe {
+      width: 100%;
+    }
+  }
   
