@@ -319,12 +319,22 @@
     }
   }
   
-.banner {
-      display: block;
+.adstera {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 5px; /* Atur jarak atas sesuai kebutuhan */
+    }
+
+    /* Style untuk banner agar responsif */
+    .adstera img {
       max-width: 100%;
       height: auto;
     }
-    /* Style untuk kontainer agar iklan ditempatkan di tengah-tengah */
-    .adstera {
-      text-align: center;
+
+    /* Style untuk mengatur responsivitas di perangkat Android */
+    @media only screen and (max-width: 768px) {
+      .adstera {
+        margin-top: 10px; /* Ubah jarak atas sesuai kebutuhan di perangkat Android */
+      }
     }
