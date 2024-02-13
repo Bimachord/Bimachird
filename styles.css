@@ -319,3 +319,12 @@
     }
   }
   
+.banner {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+    /* Style untuk kontainer agar iklan ditempatkan di tengah-tengah */
+    .adstera {
+      text-align: center;
+    }
